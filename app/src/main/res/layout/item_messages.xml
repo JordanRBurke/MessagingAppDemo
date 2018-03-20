@@ -11,11 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#b9b6b6"
-        android:fontFamily="sans-serif"
+        android:fontFamily="casual"
         android:text="Message"
-        android:textColor="#c41010"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp" />
 
 
 </android.support.constraint.ConstraintLayout>
