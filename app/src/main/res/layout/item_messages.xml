@@ -27,7 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="casual"
-        android:text="@string/textview"
+        android:text="@string/name"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"

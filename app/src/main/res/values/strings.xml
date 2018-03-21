@@ -10,4 +10,7 @@
     <string name="send">SEND</string>
     <string name="yektide_messenger">Yektide Messenger</string>
     <string name="begin_chatting">Begin Chatting</string>
+    <string name="name">Name</string>
+    <string name="back">Back</string>
+    <string name="ocean_theme">Ocean Theme</string>
 </resources>
