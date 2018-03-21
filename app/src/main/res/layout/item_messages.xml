@@ -4,17 +4,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="#0d0909">
 
     <TextView
+        android:textColor="@android:color/white"
         android:id="@+id/user_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#b9b6b6"
         android:fontFamily="casual"
-        android:text="Message"
+        android:text="@string/message"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/username_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="@string/textview"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_message"
+        tools:text="Name" />
 
 
 </android.support.constraint.ConstraintLayout>
