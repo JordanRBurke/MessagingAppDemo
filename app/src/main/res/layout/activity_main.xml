@@ -55,6 +55,7 @@
         android:layout_marginTop="156dp"
         android:fontFamily="casual"
         android:text="Made by: Jordan B."
+        android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -66,8 +67,8 @@
 
     <Button
         android:id="@+id/settings_button"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/setting_symbol"
