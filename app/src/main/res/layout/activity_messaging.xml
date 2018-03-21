@@ -9,14 +9,13 @@
     tools:context="com.jordanburke.messagingappdemo.MessagingActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/cool_space"
         app:layout_constraintBottom_toTopOf="@id/user_message_textbox"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="90dp"
-        android:id="@+id/recyclerview"
-        android:background="#000000"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/user_message_textbox"
@@ -32,8 +31,9 @@
         android:inputType="textPersonName"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
-        android:textSize="18sp"
+        android:textColorLink="@android:color/background_light"
 
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send_button"
         app:layout_constraintHorizontal_bias="1.0"

@@ -4,41 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/awesome_planet_in_space"
     tools:context="com.jordanburke.messagingappdemo.MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:fontFamily="casual"
         android:text="@string/yektide_messenger"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.184" />
 
     <Button
         android:id="@+id/begin_messaging"
-        style="@android:style/Widget.Button.Inset"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="235dp"
-        android:layout_height="98dp"
-        android:layout_marginBottom="136dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="68dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:text="@string/begin_chatting"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@android:color/background_light"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.885" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="114dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:fontFamily="casual"
+        android:text="Made by: Jordan B."
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
 
 </android.support.constraint.ConstraintLayout>
