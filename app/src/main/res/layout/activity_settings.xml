@@ -29,7 +29,7 @@
 
     <Switch
         android:id="@+id/ocean_switch"
-        android:layout_width="269dp"
+        android:layout_width="268dp"
         android:layout_height="56dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -41,15 +41,15 @@
         android:textColor="@android:color/background_light"
         android:textColorLink="@color/colorPrimaryDark"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/switch3"
+        app:layout_constraintBottom_toTopOf="@+id/heart_switch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
-        android:id="@+id/switch3"
-        android:layout_width="269dp"
+        android:id="@+id/heart_switch"
+        android:layout_width="268dp"
         android:layout_height="56dp"
         android:layout_marginBottom="344dp"
         android:layout_marginEnd="8dp"
@@ -57,6 +57,23 @@
         android:background="@drawable/heart_wallpaper"
         android:fontFamily="casual"
         android:text="Heart Theme"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/notification_switch"
+        android:layout_width="268dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="256dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/black"
+        android:fontFamily="casual"
+        android:text="Notifications"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
