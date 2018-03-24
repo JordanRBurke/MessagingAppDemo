@@ -19,7 +19,8 @@
         <activity android:name=".MessagingActivity" />
         <activity android:name=".NameSubmitActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".ChatGroupActivity"></activity>
+        <activity android:name=".ChatGroupActivity" />
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>
