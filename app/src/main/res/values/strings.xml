@@ -13,4 +13,14 @@
     <string name="name">Name</string>
     <string name="back">Back</string>
     <string name="ocean_theme">Ocean Theme</string>
+    <string name="enter_your_info_below">Enter your info below</string>
+    <string name="input_email">Input Email</string>
+    <string name="input_password">Input Password</string>
+    <string name="login">Login</string>
+    <string name="create">Create</string>
+    <string name="bio">BIO</string>
+    <string name="have_a_account_click_here">Have a account? Click here</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="make_a_account">Make a account</string>
 </resources>
