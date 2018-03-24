@@ -9,7 +9,7 @@
     tools:context="com.jordanburke.messagingappdemo.MessagingActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
@@ -52,8 +52,19 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/chat_groups_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Chat Groups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
 

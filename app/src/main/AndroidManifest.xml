@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MessagingActivity" />
         <activity android:name=".NameSubmitActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ChatGroupActivity"></activity>
     </application>
 
 </manifest>
