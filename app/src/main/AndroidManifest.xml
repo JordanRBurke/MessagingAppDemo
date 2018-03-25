@@ -21,7 +21,10 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ChatGroupActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ConnectorActivity" />
+        <activity android:name=".PrivateChatActivity" />
+        <activity android:name=".InsertRankActivity"></activity>
     </application>
 
 </manifest>
