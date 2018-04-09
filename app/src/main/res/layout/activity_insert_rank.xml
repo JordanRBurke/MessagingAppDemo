@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/awesome_planet_in_space"
+    android:background="@android:color/black"
     tools:context="com.jordanburke.messagingappdemo.InsertRankActivity">
 
     <TextView
@@ -31,14 +31,16 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:fontFamily="casual"
         android:hint="Rank"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/background_light"
         android:textColorHint="@android:color/background_light"
+        android:textColorLink="@android:color/background_light"
         android:textCursorDrawable="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

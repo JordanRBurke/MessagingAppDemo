@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.login_button_main)
     protected Button mainLoginButton;
 
+
     private ConstraintLayout backgroundMain;
 
     @Override
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isChecked = prefs.getBoolean(PREF_TAG, false);
         if (isChecked == true) {
-            backgroundMain.setBackground(getResources().getDrawable(R.drawable.ocean_main_wallpaper));
+//            backgroundMain.setBackground(getResources().getDrawable(R.drawable.ocean_main_wallpaper));
         } else {
             backgroundMain.setBackground(getResources().getDrawable(R.drawable.awesome_planet_in_space));
         }

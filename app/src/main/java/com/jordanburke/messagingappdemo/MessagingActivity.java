@@ -12,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -43,12 +44,14 @@ public class MessagingActivity extends AppCompatActivity {
     private String userNameString;
     @BindView(R.id.chat_groups_button)
     protected Button chatGroupButton;
+    private String rankStringInput;
+
 
 
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) throws IllegalStateException{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messaging);
         ButterKnife.bind(this);
@@ -56,13 +59,16 @@ public class MessagingActivity extends AppCompatActivity {
         userMessageText = findViewById(R.id.user_message_textbox);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         messageList = new ArrayList<>();
-        adapter = new MessageAdapter(messageList);
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        rankStringInput = getIntent().getStringExtra("RANK_VALUE");
+        adapter = new MessageAdapter(messageList, rankStringInput);
         recyclerView.setAdapter(adapter);
         backgroundChanger();
         userNameString = getIntent().getStringExtra("EMAIL_INFO");
 //        changeNameColor();
+
+
 
 
     }
@@ -75,8 +81,8 @@ public class MessagingActivity extends AppCompatActivity {
             notification();
         }
 
-        Messages newMessage = new Messages(userMessageText.getText().toString(), userNameString);
-        databaseReference.push().setValue(newMessage);
+//        Messages newMessage = new Messages(userMessageText.getText().toString());
+//        databaseReference.push().setValue(newMessage);
         userMessageText.setText("");
 
     }
@@ -135,13 +141,15 @@ public class MessagingActivity extends AppCompatActivity {
     }
 
 
+
+
         private void backgroundChanger() {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
             boolean isChecked = prefs.getBoolean(PREF_TAG, false);
             if (isChecked == true) {
                 recyclerView.setBackground(getResources().getDrawable(R.drawable.dark_ocean_background_new));
             } else {
-                recyclerView.setBackground(getResources().getDrawable(R.drawable.space_background));
+//                recyclerView.setBackground(getResources().getDrawable(R.drawable.space_background));
             }
         }
 

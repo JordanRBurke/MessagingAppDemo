@@ -3,6 +3,7 @@ package com.jordanburke.messagingappdemo;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -10,13 +11,15 @@ import android.widget.TextView;
  */
 
 public class Messages {
-    public Messages(String userMessage, String userName) {
+    public Messages(String userMessage, String userName, ImageView rankStatusView) {
         this.userMessage = userMessage;
         this.userName = userName;
+        this.rankStatusView = rankStatusView;
     }
 
     private String userMessage;
     private String userName;
+    private ImageView rankStatusView;
 
 
     public String getUserName() {
@@ -27,7 +30,13 @@ public class Messages {
         this.userName = userName;
     }
 
+    public ImageView getRankStatusView() {
+        return rankStatusView;
+    }
 
+    public void setRankStatusView(ImageView rankStatusView) {
+        this.rankStatusView = rankStatusView;
+    }
 
     public Messages() {
 

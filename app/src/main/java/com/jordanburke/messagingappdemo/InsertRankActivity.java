@@ -16,26 +16,33 @@ public class InsertRankActivity extends AppCompatActivity {
     protected EditText rankInput;
     @BindView(R.id.add_rank_button)
     protected Button addRank;
-    @BindView(R.id.rank_button_image)
-    protected Button siegeRank;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) throws RuntimeException{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_rank);
         ButterKnife.bind(this);
 
     }
     @OnClick(R.id.add_rank_button)
-    protected void rankButtonPress() {
+    protected void rankButtonPress()  {
         String rankStringInput = rankInput.getText().toString();
-        if (rankStringInput.equals("SILVER4")) {
-            siegeRank.setBackground(getResources().getDrawable(R.drawable.silver_four_rank));
-        } 
+//        if (rankStringInput.equals("SILVER4")) {
+//            siegeRank.setBackground(getResources().getDrawable(R.drawable.silver_four_rank));
+//        } else if (rankStringInput.equals("SILVER3")) {
+//            siegeRank.setBackground(getResources().getDrawable(R.drawable.silver_three_rank));
+//        } else if (rankStringInput.equals("SILVER2")) {
+//            siegeRank.setBackground(getResources().getDrawable(R.drawable.silver_two_rank));
+//        } else if (rankStringInput.equals("SILVER1")) {
+//            siegeRank.setBackground(getResources().getDrawable(R.drawable.silver_one_rank));
+//        } else {
+//
+//        }
 
 
         Intent toMessage = new Intent(this, MessagingActivity.class);
-//        toMessage.putExtra("RANK_VALUE", rankStringInput);
+        toMessage.putExtra("RANK_VALUE", rankStringInput);
         startActivity(toMessage);
     }
 
