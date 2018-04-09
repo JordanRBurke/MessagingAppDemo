@@ -81,8 +81,8 @@ public class MessagingActivity extends AppCompatActivity {
             notification();
         }
 
-//        Messages newMessage = new Messages(userMessageText.getText().toString());
-//        databaseReference.push().setValue(newMessage);
+        Messages newMessage = new Messages(userMessageText.getText().toString(), userNameIntent);
+        databaseReference.push().setValue(newMessage);
         userMessageText.setText("");
 
     }

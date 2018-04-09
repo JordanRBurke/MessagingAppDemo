@@ -11,10 +11,9 @@ import android.widget.TextView;
  */
 
 public class Messages {
-    public Messages(String userMessage, String userName, ImageView rankStatusView) {
+    public Messages(String userMessage, String userName) {
         this.userMessage = userMessage;
         this.userName = userName;
-        this.rankStatusView = rankStatusView;
     }
 
     private String userMessage;
