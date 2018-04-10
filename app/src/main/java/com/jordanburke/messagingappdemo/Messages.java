@@ -11,9 +11,12 @@ import android.widget.TextView;
  */
 
 public class Messages {
-    public Messages(String userMessage, String userName) {
+    private  String url;
+
+    public Messages(String userMessage, String userName, String url) {
         this.userMessage = userMessage;
         this.userName = userName;
+        this.url = url;
     }
 
     private String userMessage;
@@ -49,6 +52,9 @@ public class Messages {
         this.userMessage = userMessage;
     }
 
+    public Object getUrl() {
+        return url;
+    }
 }
 
 //public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {

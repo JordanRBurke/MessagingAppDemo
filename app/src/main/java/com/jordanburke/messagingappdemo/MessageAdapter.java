@@ -56,7 +56,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 
         public MessageViewHolder(View itemView) {
             super(itemView);
-            message = (TextView) itemView.findViewById(R.id.user_message);
+            message = itemView.findViewById(R.id.user_message);
             userName = itemView.findViewById(R.id.username_view);
             rankStatus = itemView.findViewById(R.id.rainbow_image_view);
 
@@ -65,6 +65,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         public void bindMessages(Messages messages) {
             userName.setText(messages.getUserName());
             message.setText(messages.getUserMessage());
+//            Glide.with(itemView.getContext()).load("https://www.google.com/search?q=space+background+images&source=lnms&tbm=isch&sa=X&ved=0ahUKEwit-6_3va7aAhVCoVMKHUtlCxsQ_AUICigB&biw=722&bih=694#imgrc=Gs_tzt6CEZ45HM:").into(rankStatus);
+            Glide.with(itemView.getContext()).load(messages.getUrl()).into(rankStatus);
+//            add String url to Messages model based on ranking that the user enters in
             rankCheckSilverAndGold();
             rankCheckCopperAndBronze();
             rankCheckPlatinumAndDiamond();

@@ -58,6 +58,7 @@ public class MessagingActivity extends AppCompatActivity {
         userName = findViewById(R.id.username_view);
         userMessageText = findViewById(R.id.user_message_textbox);
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference.child("RainbowSixSiege").push();
         messageList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -82,11 +83,36 @@ public class MessagingActivity extends AppCompatActivity {
             notification();
         }
 
-        Messages newMessage = new Messages(userMessageText.getText().toString(), userNameIntent);
+        Messages newMessage = new Messages(userMessageText.getText().toString(), userNameIntent, getUrl());
         databaseReference.push().setValue(newMessage);
         userMessageText.setText("");
 
     }
+
+    private String getUrl() {
+        switch (rankStringInput) {
+//            case "SILVER1":
+//                return "https://www.google.com/search?q=Silver+1+siege+rank&" +
+//                        "source=lnms&tbm=isch&sa=X&ved=0ahUKEwjDrdGsrLDaAhUm" +
+//                        "6YMKHedqDfQQ_AUICigB&biw=878&bih=572#imgrc=kyAjK24XlLZLqM:";
+//
+//            case "GOLD4":
+//                return "https://www.google.com/search?tbm=isch&q=rainbow+six+siege" +
+//                        "+silver+3+rank&chips=q:rainbow+six+siege+silver+3+rank,on" +
+//                        "line_chips:gold&sa=X&ved=0ahUKEwjH0ciir7DaAhUk8IMKHePFDJ0" +
+//                        "Q4lYIMCgI&biw=878&bih=572&dpr=2#imgrc=6pUI_CSSitBNKM:";
+//            case "GOLD3":
+//                return "https://www.google.com/search?tbm=isch&q=rainbow+six+sie" +
+//                        "ge+silver+3+rank&chips=q:rainbow+six+siege+silver+3+rank" +
+//                        ",online_chips:gold&sa=X&ved=0ahUKEwjH0ciir7DaAhUk8IMKHePFD" +
+//                        "J0Q4lYIMCgI&biw=878&bih=572&dpr=2#imgdii=qMFf_mHDhegSFM:&im" +
+//                        "grc=6pUI_CSSitBNKM:";
+            default:
+                return null;
+
+        }
+    }
+
     @OnClick(R.id.chat_groups_button)
     protected void chatGroupsButtonPressed() {
         Intent chatGroups = new Intent(this, ChatGroupActivity.class);
@@ -112,9 +138,11 @@ public class MessagingActivity extends AppCompatActivity {
 
 
     private void initMessages() {
+
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
                 messageList.add(dataSnapshot.getValue(Messages.class));
                 adapter.notifyDataSetChanged();
             }
