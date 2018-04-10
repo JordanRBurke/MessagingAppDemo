@@ -123,7 +123,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             } else if (rankStringInput.equals("DIAMOND1")) {
                 Glide.with(itemView.getContext()).load(R.drawable.diamond_rank).into(rankStatus);
             } else {
-               
+
             }
         }
 

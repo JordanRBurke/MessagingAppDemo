@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/awesome_planet_in_space"
+    android:background="@drawable/dark_woods_background"
     tools:context="com.jordanburke.messagingappdemo.ChatGroupActivity">
 
     <Button
@@ -13,7 +13,7 @@
         android:layout_height="81dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="44dp"
-        android:background="@drawable/rainbow_six_logo"
+        android:background="@drawable/rainbow_custom_purple_border_filled"
         android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/csgo_button_group"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_height="81dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
-        android:background="@drawable/csgo_icon_image"
+        android:background="@drawable/csgo_custom_button_image"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,6 +38,7 @@
         android:layout_marginTop="44dp"
         android:background="@drawable/worldofwarcraft_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/rainbow_six_button"
         app:layout_constraintTop_toTopOf="parent" />
 

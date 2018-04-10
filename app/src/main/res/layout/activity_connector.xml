@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/awesome_planet_in_space"
+    android:background="@drawable/dark_woods_background"
     tools:context="com.jordanburke.messagingappdemo.ConnectorActivity">
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="108dp"
         android:fontFamily="casual"
-        android:text="Your Profile :)"
+        android:text="@string/your_profile"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -55,7 +55,7 @@
         android:layout_marginBottom="108dp"
         android:layout_marginStart="80dp"
         android:fontFamily="casual"
-        android:text="Email:"
+        android:text="@string/email"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

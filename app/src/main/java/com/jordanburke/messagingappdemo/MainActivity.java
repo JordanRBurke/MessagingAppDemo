@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.bumptech.glide.Glide;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected Button mainLoginButton;
 
 
+
     private ConstraintLayout backgroundMain;
 
     @Override
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         backgroundMain = findViewById(R.id.constraint_main);
+//        Glide.with(this).load("https://www.google.com/search?q=space+background+images&source=lnms&tbm=isch&sa=X&ved=0ahUKEwit-6_3va7aAhVCoVMKHUtlCxsQ_AUICigB&biw=722&bih=694#imgrc=Gs_tzt6CEZ45HM:").into();
         backgroundChanger();
 
 

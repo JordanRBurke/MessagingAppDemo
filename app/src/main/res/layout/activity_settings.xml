@@ -5,7 +5,7 @@
     android:id="@+id/settings_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/awesome_planet_in_space"
+    android:background="@drawable/dark_woods_background"
     tools:context="com.jordanburke.messagingappdemo.SettingsActivity">
 
     <Button
