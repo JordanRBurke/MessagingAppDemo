@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked == true) {
 //            backgroundMain.setBackground(getResources().getDrawable(R.drawable.ocean_main_wallpaper));
         } else {
-            backgroundMain.setBackground(getResources().getDrawable(R.drawable.awesome_planet_in_space));
+            backgroundMain.setBackground(getResources().getDrawable(R.drawable.dark_woods_background));
         }
     }
 
