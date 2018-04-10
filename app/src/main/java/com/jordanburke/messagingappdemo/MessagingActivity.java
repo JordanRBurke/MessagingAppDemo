@@ -62,10 +62,11 @@ public class MessagingActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         rankStringInput = getIntent().getStringExtra("RANK_VALUE");
+        userNameString = getIntent().getStringExtra("EMAIL_INFO");
         adapter = new MessageAdapter(messageList, rankStringInput);
         recyclerView.setAdapter(adapter);
         backgroundChanger();
-        userNameString = getIntent().getStringExtra("EMAIL_INFO");
+
 //        changeNameColor();
 
 

@@ -1,15 +1,20 @@
 package com.jordanburke.messagingappdemo;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * Created by jordanburke on 3/19/18.
@@ -60,24 +65,66 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         public void bindMessages(Messages messages) {
             userName.setText(messages.getUserName());
             message.setText(messages.getUserMessage());
-            rankCheck();
+            rankCheckSilverAndGold();
+            rankCheckCopperAndBronze();
+            rankCheckPlatinumAndDiamond();
 
         }
 
-        private void rankCheck() {
+        private void rankCheckSilverAndGold() {
             if (rankStringInput.equals("SILVER4")) {
-//                rankStatus.setBackground(itemView.getResources().getDrawable(R.drawable.silver_four_rank));
                 Glide.with(itemView.getContext()).load(R.drawable.silver_four_rank).into(rankStatus);
             } else if (rankStringInput.equals("SILVER3")) {
-                rankStatus.setBackground(itemView.getResources().getDrawable(R.drawable.silver_three_rank));
+                Glide.with(itemView.getContext()).load(R.drawable.silver_three_rank).into(rankStatus);
             } else if (rankStringInput.equals("SILVER2")) {
-                rankStatus.setBackground(itemView.getResources().getDrawable(R.drawable.silver_two_rank));
+                Glide.with(itemView.getContext()).load(R.drawable.silver_two_rank).into(rankStatus);
             } else if (rankStringInput.equals("SILVER1")) {
-                rankStatus.setBackground(itemView.getResources().getDrawable(R.drawable.silver_one_rank));
-            } else {
-
+                Glide.with(itemView.getContext()).load(R.drawable.silver_one_rank).into(rankStatus);
+            } else if (rankStringInput.equals("GOLD4")) {
+                Glide.with(itemView.getContext()).load(R.drawable.gold_four_rank).into(rankStatus);
+            } else if (rankStringInput.equals("GOLD3")) {
+                Glide.with(itemView.getContext()).load(R.drawable.gold_three_rank).into(rankStatus);
+            } else if (rankStringInput.equals("GOLD2")) {
+                Glide.with(itemView.getContext()).load(R.drawable.gold_two_rank).into(rankStatus);
+            } else if (rankStringInput.equals("GOLD1")) {
+                Glide.with(itemView.getContext()).load(R.drawable.gold_one_rank).into(rankStatus);
             }
 
+        }
+
+        private void rankCheckCopperAndBronze() {
+            if (rankStringInput.equals("COPPER1")) {
+                Glide.with(itemView.getContext()).load(R.drawable.copper_one_rank).into(rankStatus);
+            } else if (rankStringInput.equals("COPPER2")) {
+                Glide.with(itemView.getContext()).load(R.drawable.copper_two_rank).into(rankStatus);
+            } else if (rankStringInput.equals("COPPER3")) {
+                Glide.with(itemView.getContext()).load(R.drawable.copper_three_rank).into(rankStatus);
+            } else if (rankStringInput.equals("COPPER4")) {
+                Glide.with(itemView.getContext()).load(R.drawable.copper_four_rank).into(rankStatus);
+            } else if (rankStringInput.equals("BRONZE1")) {
+                Glide.with(itemView.getContext()).load(R.drawable.bronze_one_rank).into(rankStatus);
+            } else if (rankStringInput.equals("BRONZE2")) {
+                Glide.with(itemView.getContext()).load(R.drawable.bronze_two_rank).into(rankStatus);
+            } else if (rankStringInput.equals("BRONZE3")) {
+                Glide.with(itemView.getContext()).load(R.drawable.bronze_three_rank).into(rankStatus);
+            } else if (rankStringInput.equals("BRONZE4")) {
+                Glide.with(itemView.getContext()).load(R.drawable.bronze_four_rank).into(rankStatus);
+            }
+
+        }
+
+        private void rankCheckPlatinumAndDiamond() {
+            if (rankStringInput.equals("PLATINUM1")) {
+                Glide.with(itemView.getContext()).load(R.drawable.platinum_one_rank).into(rankStatus);
+            } else if (rankStringInput.equals("PLATINUM2")) {
+                Glide.with(itemView.getContext()).load(R.drawable.platinum_two_rank).into(rankStatus);
+            } else if (rankStringInput.equals("PLATINUM3")) {
+                Glide.with(itemView.getContext()).load(R.drawable.platinum_three_rank).into(rankStatus);
+            } else if (rankStringInput.equals("DIAMOND1")) {
+                Glide.with(itemView.getContext()).load(R.drawable.diamond_rank).into(rankStatus);
+            } else {
+               
+            }
         }
 
     }
