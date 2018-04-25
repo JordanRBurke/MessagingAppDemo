@@ -1,20 +1,15 @@
 package com.jordanburke.messagingappdemo;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.List;
-
-import butterknife.BindView;
 
 /**
  * Created by jordanburke on 3/19/18.

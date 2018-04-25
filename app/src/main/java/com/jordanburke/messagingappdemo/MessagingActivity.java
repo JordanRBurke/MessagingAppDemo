@@ -12,8 +12,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -57,7 +57,10 @@ public class MessagingActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         userName = findViewById(R.id.username_view);
         userMessageText = findViewById(R.id.user_message_textbox);
-        databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference("SIEGE");
+        DatabaseReference csgoChild = databaseReference.child("CSGO");
+        DatabaseReference seaOfThiefsChild = databaseReference.child("SEA_OF_THIEVES");
+        csgoChild.setValue("");
         databaseReference.child("RainbowSixSiege").push();
         messageList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
@@ -125,6 +128,7 @@ public class MessagingActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         initMessages();
+        csgoChild();
     }
 
     private void changeNameColor() {
@@ -139,6 +143,39 @@ public class MessagingActivity extends AppCompatActivity {
 
     private void initMessages() {
 
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                messageList.add(dataSnapshot.getValue(Messages.class));
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+        });
+
+    }
+
+    private void csgoChild() {
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
