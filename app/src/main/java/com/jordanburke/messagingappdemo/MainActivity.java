@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected Button settingsButton;
     @BindView(R.id.login_button_main)
     protected Button mainLoginButton;
+    @BindView(R.id.main_navigation_view)
+    protected BottomNavigationView bottomNavigationView;
 
 
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         backgroundMain = findViewById(R.id.constraint_main);
 //        Glide.with(this).load("https://www.google.com/search?q=space+background+images&source=lnms&tbm=isch&sa=X&ved=0ahUKEwit-6_3va7aAhVCoVMKHUtlCxsQ_AUICigB&biw=722&bih=694#imgrc=Gs_tzt6CEZ45HM:").into();
         backgroundChanger();
+
 
 
 

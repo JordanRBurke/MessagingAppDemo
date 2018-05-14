@@ -58,9 +58,9 @@ public class MessagingActivity extends AppCompatActivity {
         userName = findViewById(R.id.username_view);
         userMessageText = findViewById(R.id.user_message_textbox);
         databaseReference = FirebaseDatabase.getInstance().getReference("SIEGE");
-        DatabaseReference csgoChild = databaseReference.child("CSGO");
+
         DatabaseReference seaOfThiefsChild = databaseReference.child("SEA_OF_THIEVES");
-        csgoChild.setValue("");
+
         databaseReference.child("RainbowSixSiege").push();
         messageList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
@@ -179,13 +179,16 @@ public class MessagingActivity extends AppCompatActivity {
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
+                DatabaseReference csgoChild = databaseReference.child("CSGO");
                 messageList.add(dataSnapshot.getValue(Messages.class));
                 adapter.notifyDataSetChanged();
+
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                s = "SIEGE";
+
 
             }
 

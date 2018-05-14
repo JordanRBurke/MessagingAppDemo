@@ -26,8 +26,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         this.rankStringInput = rankStringInput;
     }
 
+
+
     @Override
-    public MessageAdapter.MessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_messages, parent, false);
         return new MessageViewHolder(itemView);
     }
