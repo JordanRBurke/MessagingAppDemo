@@ -1,4 +1,4 @@
-package com.jordanburke.messagingappdemo;
+package com.jordanburke.messagingappdemo.MessageBackEnd;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

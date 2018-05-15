@@ -20,6 +20,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.jordanburke.messagingappdemo.MessageBackEnd.MessageAdapter;
+import com.jordanburke.messagingappdemo.MessageBackEnd.Messages;
 
 
 import java.util.ArrayList;

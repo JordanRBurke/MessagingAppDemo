@@ -8,30 +8,7 @@
     android:background="@drawable/dark_woods_background"
     tools:context="com.jordanburke.messagingappdemo.ConnectorActivity">
 
-    <Button
-        android:id="@+id/public_chat_connector"
-        android:layout_width="109dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="casual"
-        android:text="Public"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/private_chat"
-        android:layout_width="109dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="casual"
-        android:text="Private"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -39,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="casual"
         android:text="@string/your_profile"
         android:textColor="@android:color/background_light"
@@ -79,6 +56,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <FrameLayout
+        android:id="@+id/connector_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp">
+
+    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/main_navigation_view"

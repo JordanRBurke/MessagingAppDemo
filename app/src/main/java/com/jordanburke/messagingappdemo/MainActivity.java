@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected Button settingsButton;
     @BindView(R.id.login_button_main)
     protected Button mainLoginButton;
-    @BindView(R.id.main_navigation_view)
-    protected BottomNavigationView bottomNavigationView;
+
 
 
 
