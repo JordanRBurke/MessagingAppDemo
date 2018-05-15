@@ -118,13 +118,7 @@ public class MessagingActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.chat_groups_button)
-    protected void chatGroupsButtonPressed() {
-        Intent chatGroups = new Intent(this, ChatGroupActivity.class);
-        startActivity(chatGroups);
 
-
-    }
 
     @Override
     protected void onResume() {

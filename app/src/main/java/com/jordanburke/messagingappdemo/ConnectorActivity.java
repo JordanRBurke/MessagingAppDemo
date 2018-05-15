@@ -23,6 +23,8 @@ public class ConnectorActivity extends AppCompatActivity {
     @BindView(R.id.main_navigation_view)
     protected BottomNavigationView bottomNavigationView;
     private PublicChatGroupFragment publicChatGroupFragment;
+    private PrivateChatFragment privateChatFragment;
+    private FindSomethingFragment findSomethingFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,19 +48,22 @@ public class ConnectorActivity extends AppCompatActivity {
 //                startActivity(toPublic);
                 switch (item.getItemId()) {
                     case R.id.group_chat_navigation:
-                        toastMessage("Group Chats");
                         publicChatGroupFragment = PublicChatGroupFragment.newInstance();
                         getSupportFragmentManager().beginTransaction().replace(R.id.connector_frame_layout, publicChatGroupFragment).commit();
                         return true;
 
                     case R.id.private_chat_navigation:
-                        toastMessage("Private Chats");
-                        Intent toPrivate = new Intent(getBaseContext(), PrivateChatActivity.class);
-                        startActivity(toPrivate);
+//                        Intent toPrivate = new Intent(getBaseContext(), PrivateChatActivity.class);
+//                        startActivity(toPrivate);
+                        privateChatFragment = PrivateChatFragment.newInstance();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.connector_frame_layout, privateChatFragment).commit();
+
                         return true;
 
                     case R.id.search_chat_navigation:
-                        toastMessage("Search");
+                        findSomethingFragment = FindSomethingFragment.newInstance();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.connector_frame_layout, findSomethingFragment).commit();
+
 
                         return true;
 

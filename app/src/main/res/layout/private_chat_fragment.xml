@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/private_constraint_layout"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_woods_background">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Create Channel"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@id/private_constraint_layout"
+        app:layout_constraintRight_toRightOf="@id/private_constraint_layout"
+        app:layout_constraintTop_toTopOf="@id/private_constraint_layout"
+
+         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/private_chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="@id/private_constraint_layout"
+        app:layout_constraintLeft_toLeftOf="@id/private_constraint_layout"
+        app:layout_constraintRight_toRightOf="@id/private_constraint_layout"
+        app:layout_constraintTop_toBottomOf="@id/button2">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+        android:id="@+id/private_chat_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dark_woods_background">
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
